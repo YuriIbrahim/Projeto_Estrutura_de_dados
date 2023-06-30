@@ -1,0 +1,42 @@
+create database poo;
+use poo;
+
+create table vendedores(
+	id int AUTO_INCREMENT,
+	nome varchar(60)  not null,
+    email varchar(60) not null,
+    cpf varchar(60) not null,
+    telefone varchar(9) not null,
+    CONSTRAINT pk_ex_cliente PRIMARY KEY (id)
+);
+
+create table usuarios(
+	id int AUTO_INCREMENT,
+	nome varchar(60)  not null,
+    email varchar(60) not null,
+    cpf varchar(60) not null,
+    telefone varchar(9) not null,
+    CONSTRAINT pk_ex_usuarios PRIMARY KEY (id)
+);
+
+create table administradores(
+	id int AUTO_INCREMENT,
+	nome varchar(60)  not null,
+    email varchar(60) not null,
+    cpf varchar(60) not null,
+    telefone varchar(9) not null,
+    CONSTRAINT pk_ex_administradores PRIMARY KEY (id)
+);
+
+create table produtos(
+	id int AUTO_INCREMENT,
+	nome varchar(60)  not null,
+    preco varchar(60) not null,
+    descricao varchar(60) not null,
+    CONSTRAINT pk_ex_produtos PRIMARY KEY (id)
+);
+
+DROP TABLE vendedores;
+DROP TABLE usuarios;
+DROP TABLE produtos;
+DROP TABLE administradores;
